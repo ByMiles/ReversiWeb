@@ -15,4 +15,7 @@ export class CourtCourt{
   getStats(row: number, col: number){
     return this._cells[row][col].getStats();
   }
+  getCells() {
+    return this._cells;
+  }
 }
