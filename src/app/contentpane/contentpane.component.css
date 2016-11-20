@@ -1,0 +1,52 @@
+:root{
+  --court-size: calc(70vh);
+  --top-height: calc((100% - 70vh)/2);
+  --top-width: 100%;
+  --side-width: calc((100% - 70vh)/2);
+  --side-height: calc(50vh)
+
+}
+
+.titlebar{
+  background-color: aliceblue;
+  width: 100%;
+  height: calc((100% - 70vh)/2);
+}
+
+.actionbar{
+  display: inline-block;
+  background-color: cornflowerblue;
+  position: absolute;
+  top: calc(calc((100% - 70vh)/2) + 70vh);
+  width: 100%;
+  height: calc((100% - 70vh)/2);
+}
+
+.leftbar{
+  display: inline-block;
+  background-color: blanchedalmond;
+  position: absolute;
+  top: calc((100% - 70vh)/2);
+  width: calc((100% - 70vh)/2);
+  height: 70vh;
+}
+
+.rightbar{
+  display: inline-block;
+  background-color: lightyellow;
+  position: absolute;
+  top: calc((100% - 70vh)/2);
+  left: calc((100% - 70vh)/2 + 70vh);
+  width: calc((100% - 70vh)/2);
+  height: 70vh;
+}
+
+.court{
+  display: inline-block;
+  background-color: purple;
+  position: absolute;
+  left: calc((100% - 70vh)/2);
+  top: calc((100% - 70vh)/2);
+  width: 70vh;
+  height: 70vh;
+}
