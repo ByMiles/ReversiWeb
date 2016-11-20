@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CourtCourt } from './court.court'
+import { CourtInfo } from 'app/courtinfo'
 
 @Component({
   selector: 'court',
@@ -7,11 +7,13 @@ import { CourtCourt } from './court.court'
   styleUrls: ['./court.component.css']
 })
 export class CourtComponent implements OnInit {
-  round: CourtCourt;
+  round: CourtInfo;
+  name: string = "23";
   constructor() { }
 
   ngOnInit() {
-    this.round = new CourtCourt(8);
+    this.round = new CourtInfo(8);
+    this.name = "14";
   }
 
 }

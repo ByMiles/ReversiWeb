@@ -12,8 +12,6 @@ import { ActionbarComponent } from './actionbar/actionbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CourtComponent } from './court/court.component';
 import { CellComponent } from './cell/cell.component';
-import { Cell } from './court/court.cells';
-import { CourtCourt} from './court/court.court';
 
 @NgModule({
   declarations: [
@@ -25,9 +23,7 @@ import { CourtCourt} from './court/court.court';
     ActionbarComponent,
     SidebarComponent,
     CourtComponent,
-    CellComponent,
-    Cell,
-    CourtCourt
+    CellComponent
   ],
   imports: [
     BrowserModule,
