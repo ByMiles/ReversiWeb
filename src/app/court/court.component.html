@@ -1,6 +1,6 @@
-<div *ngFor="let cellrow of round.cells">
-  <div class = row; *ngFor="let cellcol of round.cells[cellrow]">
-    <div class = col><cell></cell></div>
-  </div>
+<div class = grid *ngFor="let cellrow of round.cells ; let rowindex = index">
+    <div class = col *ngFor="let cellcol of cellrow; let colindex = index">
+        <cell [row] = "rowindex" [col] = "colindex"></cell>
+    </div>
 </div>
 

@@ -4,16 +4,15 @@ import { CourtInfo } from 'app/courtinfo'
 @Component({
   selector: 'court',
   templateUrl: './court.component.html',
+  //template: '<pre>{{ round.cells | json }}</pre>',
   styleUrls: ['./court.component.css']
 })
 export class CourtComponent implements OnInit {
   round: CourtInfo;
-  name: string = "23";
-  constructor() { }
+  constructor() {this.round = new CourtInfo(8); }
 
   ngOnInit() {
-    this.round = new CourtInfo(8);
-    this.name = "14";
+
   }
 
 }

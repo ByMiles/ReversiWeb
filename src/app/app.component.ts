@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {VboxComponent} from "./vbox/vbox.component";
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import {VboxComponent} from "./vbox/vbox.component";
 
 })
 export class AppComponent {
-  title = 'app works!';
 }

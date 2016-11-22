@@ -1,7 +1,58 @@
 
 div{
-  display: flex;
+  display: inline-block;
   background-color: green;
+  width: 100%;
+  height: 100%;
+}
+
+.circleP1{
+  display: inline-flex;
+  background: black;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  border-radius: 100%;
+}
+
+.circleP2{
+  display: inline-block;
+  background: white;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  top: 10%;
+  left: 10%;
+
+  border-radius: 100%;
+}
+
+.circleP1Prev{
+  display: inline-block;
+  background: black;
+  width: 20%;
+  height: 20%;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  border-radius: 100%;
+}
+
+.circleP2Prev{
+  display: inline-block;
+  background: white;
+  width: 20%;
+  height: 20%;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  border-radius: 100%;
+}
+
+.noCircle{
+  display: inline-block;
   width: 100%;
   height: 100%;
 }
