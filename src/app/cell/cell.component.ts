@@ -1,13 +1,17 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {DisplayService} from 'app/display.service'
 
 @Component({
   selector: 'cell',
   templateUrl: './cell.component.html',
-  styleUrls: ['./cell.component.css']
+  styleUrls: ['./cell.component.css'],
+  providers: [DisplayService]
 })
 export class CellComponent implements OnInit {
   @Input() row: number;
   @Input() col: number;
+  @Input() state: number;
+  @Input() display: DisplayService;
 
   p1: boolean = false;
   p2: boolean = false;
@@ -15,14 +19,11 @@ export class CellComponent implements OnInit {
   prev2: boolean = false;
   noCirc: boolean = true;
 
-  state: number = 0;
 
-  constructor() {
+  constructor() {}
 
-  }
-
-  setState(state: number){
-    switch (state){
+  setState(){
+    switch (this.state){
       case 1:
         this.p1 = true;
         this.p2 = false;
@@ -60,9 +61,12 @@ export class CellComponent implements OnInit {
     }
   }
 
-  switchState(){
-    this.state = (this.state + 1)% 5;
-    this.setState(this.state);
+  doAction(){
+    console.log("action");
+    if(this.state == 3 || this.state == 4){
+      this.display.endRound(this.row, this.col);
+      console.log("reaction");
+    }
   }
 
   ngOnInit() {

@@ -1,2 +1,2 @@
-<div (click)="switchState()"><div [class.circleP1]="p1" [class.circleP2]="p2" [class.circleP1Prev]="prev1" [class.circleP2Prev]="prev2" [class.noCircle]="noCirc" ></div></div>
+<div id = cell (click)="doAction()"><div [class.circleP1]="(state == 1)" [class.circleP2]="(state == 2)" [class.circleP1Prev]="(state == 3)" [class.circleP2Prev]="(state == 4)" [class.noCircle]="(state == 0)" ></div></div>
 

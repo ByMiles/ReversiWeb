@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ActionbarComponent } from 'app/actionbar/actionbar.component';
-import { SidebarComponent } from 'app/sidebar/sidebar.component';
-import { TitlebarComponent } from 'app/titlebar/titlebar.component';
-import { CourtComponent } from 'app/court/court.component';
+import { Component, OnInit, Input } from '@angular/core';
+import { DisplayService } from 'app/display.service'
 
 @Component({
   selector: 'contentpane',
   templateUrl: './contentpane.component.html',
-  styleUrls: ['./contentpane.component.css']
+  styleUrls: ['./contentpane.component.css'],
+  providers: [DisplayService]
 })
 export class ContentpaneComponent implements OnInit {
+
+  @Input() display: DisplayService;
 
   constructor() { }
 

@@ -11,7 +11,7 @@ export class CourtInfo{
     {
       this.cells[row] = [];
       for(let col: number = 0; col < x; col++){
-        this.cells[row][col] = new CellInfo(row, col, [false, false, false])
+        this.cells[row][col] = new CellInfo(row, col, 0)
       }
     }
   }

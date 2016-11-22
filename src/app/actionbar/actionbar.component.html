@@ -1,3 +1,2 @@
-<p>
-  {{ action }}
-</p>
+<button [class.hidden]="display.skipable()" (click)="skipAction()"> Skip </button>
+<button [class.hidden]="display.undoable()" (click)="undoAction()"> Undo </button>

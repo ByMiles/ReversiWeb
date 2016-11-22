@@ -1,12 +1,18 @@
-.grid {
+#grid {
   display: table;
   width: 100%;
   height: 12.5%;
-  border-spacing: 3px;
 }
-.col{
-  padding:3px;
+#col{
+  padding: 3px;
   width:12.5%;
   display:table-cell;
-  border:#f0f0f0 1px solid;
+}
+
+#cell{
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  width: calc(12.5% - 6px);
+  height: calc(12.5% - 6px);
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DisplayService } from 'app/display.service';
+import {CourtInfo} from 'app/courtinfo';
 
 @Component({
   selector: 'vbox',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VboxComponent implements OnInit {
 
-  constructor() { }
+  display: DisplayService;
+
+  constructor() {
+    this.display = new DisplayService(new CourtInfo(8));
+  }
 
   ngOnInit() {
   }
