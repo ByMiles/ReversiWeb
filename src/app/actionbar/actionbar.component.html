@@ -1,2 +1,11 @@
-<button [class.hidden]="display.skipable()" (click)="skipAction()"> Skip </button>
-<button [class.hidden]="display.undoable()" (click)="undoAction()"> Undo </button>
+<div>
+  <div></div>
+  <div></div>
+  <coin class = "p1" [display] = "display" [score] = "display.getScoreP1()"></coin>
+  <button [class.hidden]="display.skipable()" (click)="skipAction()"> Skip </button>
+  <p class = "label" [class.p1] ="display.getIn_charge()[0]" [class.p2] = "display.getIn_charge()[1]" >{{ display.getLabelText() }}</p>
+  <button [class.hidden]="display.undoable()" (click)="undoAction()"> Undo </button>
+  <coin class = "p2" [display] = "display" [score] = "display.getScoreP2()"></coin>
+  <div></div>
+  <div></div>
+</div>

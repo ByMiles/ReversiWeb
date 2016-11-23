@@ -12,6 +12,7 @@ import { ActionbarComponent } from './actionbar/actionbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CourtComponent } from './court/court.component';
 import { CellComponent } from './cell/cell.component';
+import { CoinComponent } from './coin/coin.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CellComponent } from './cell/cell.component';
     ActionbarComponent,
     SidebarComponent,
     CourtComponent,
-    CellComponent
+    CellComponent,
+    CoinComponent
   ],
   imports: [
     BrowserModule,

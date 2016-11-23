@@ -1,56 +1,41 @@
-:root{
-  --court-size: calc(70vh);
-  --top-height: calc((100% - 70vh)/2);
-  --top-width: 100%;
-  --side-width: calc((100% - 70vh)/2);
-  --side-height: calc(50vh)
 
+.titlebar {
+  display : block;
+  width : 100%;
+  height : calc((100% - 70vh) / 2);
 }
-
-.titlebar{
-  background-color: aliceblue;
-  width: 100%;
-  height: calc((100% - 70vh)/2);
+.actionbar {
+  display : block;
+  position : absolute;
+  top : calc((100% - 70vh) / 2 + 70vh);
+  width : 100%;
+  height : calc((100% - 70vh) / 2);
 }
-
-.actionbar{
-  display: inline-block;
-  background-color: cornflowerblue;
-  position: absolute;
-  top: calc(calc((100% - 70vh)/2) + 70vh);
-  width: 100%;
-  height: calc((100% - 70vh)/2);
+.leftbar {
+  display : inline-block;
+  position : absolute;
+  top : calc((100% - 70vh) / 2);
+  width : calc((100% - 70vh) / 2);
+  height : 70vh;
 }
-
-.leftbar{
-  display: inline-block;
-  background-color: blanchedalmond;
-  position: absolute;
-  top: calc((100% - 70vh)/2);
-  width: calc((100% - 70vh)/2);
-  height: 70vh;
+.rightbar {
+  display : inline-block;
+  position : absolute;
+  top : calc((100% - 70vh) / 2);
+  left : calc((100% - 70vh) / 2 + 70vh);
+  width : calc((100% - 70vh) / 2);
+  height : 70vh;
 }
-
-.rightbar{
-  display: inline-block;
-  background-color: lightyellow;
-  position: absolute;
-  top: calc((100% - 70vh)/2);
-  left: calc((100% - 70vh)/2 + 70vh);
-  width: calc((100% - 70vh)/2);
-  height: 70vh;
-}
-
-.court{
-  display: inline-block;
-  background-color: darkslategray;
-  position: absolute;
-  left: calc((100% - 70vh)/2);
-  top: calc((100% - 70vh)/2);
-  width: calc(70vh - 40px);
-  height: calc(70vh - 40px);
-  border-style: outset;
-  border-color: #555555 #777777 #777777 #555555 ;
-  border-radius: 3%;
-  border-width: 20px;
+.court {
+  display : inline-block;
+  background-color : darkslategray;
+  position : absolute;
+  left : calc((100% - 70vh) / 2);
+  top : calc((100% - 70vh) / 2);
+  width : calc(70vh - 40px);
+  height : calc(70vh - 40px);
+  border-style : outset;
+  border-color : lightgray darkgray darkgray lightgray;
+  border-radius : 3%;
+  border-width : 20px;
 }
