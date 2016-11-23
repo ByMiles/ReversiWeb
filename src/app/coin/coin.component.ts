@@ -6,13 +6,11 @@ import { DisplayService } from 'app/display.service';
   selector: 'coin',
   templateUrl: './coin.component.html',
   styleUrls: ['./coin.component.css'],
-  providers: [DisplayService]
 })
 export class CoinComponent implements OnInit {
 
-  @Input() display: DisplayService;
   @Input() score: number;
-  constructor() { }
+  constructor(private _display: DisplayService) { }
 
   ngOnInit() {
   }

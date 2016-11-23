@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DisplayService } from 'app/display.service';
-import {CourtInfo} from 'app/courtinfo';
 
 @Component({
   selector: 'vbox',
@@ -9,11 +8,7 @@ import {CourtInfo} from 'app/courtinfo';
 })
 export class VboxComponent implements OnInit {
 
-  display: DisplayService;
-
-  constructor() {
-    this.display = new DisplayService(new CourtInfo(8));
-  }
+  constructor(private _display: DisplayService) {}
 
   ngOnInit() {
   }

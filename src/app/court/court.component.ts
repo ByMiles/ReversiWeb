@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CourtInfo } from 'app/courtinfo'
+import { Component, OnInit} from '@angular/core';
 import { DisplayService } from 'app/display.service'
 
 @Component({
@@ -7,19 +6,14 @@ import { DisplayService } from 'app/display.service'
   templateUrl: './court.component.html',
   //template: '<pre>{{ display.round | json }}</pre>',
   styleUrls: ['./court.component.css'],
-  providers: [DisplayService]
 })
 export class CourtComponent implements OnInit {
 
-  courtInfo: CourtInfo;
-  @Input() display: DisplayService;
-
-  constructor() {
-
+  constructor(private _display: DisplayService) {
   }
 
   ngOnInit() {
-    this.display.newGame();
+    this._display.newGame();
   }
 
 }

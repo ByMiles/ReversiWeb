@@ -14,6 +14,8 @@ import { CourtComponent } from './court/court.component';
 import { CellComponent } from './cell/cell.component';
 import { CoinComponent } from './coin/coin.component';
 
+import { DisplayService } from './display.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { CoinComponent } from './coin/coin.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DisplayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

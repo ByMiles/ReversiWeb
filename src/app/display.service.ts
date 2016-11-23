@@ -1,11 +1,9 @@
 import {Injectable} from '@angular/core';
 import { RulesService } from './rules.service';
-import {CourtInfo } from './courtinfo';
+import {CellInfo} from './cellinfo';
 
 @Injectable()
 export class DisplayService {
-
-  private courtInfo: CourtInfo;
 
   private rules: RulesService;
 
@@ -21,14 +19,19 @@ export class DisplayService {
 
   private x : number;
 
+  public cells;
+
   private labelText: string;
 
-  constructor(courtInfo: CourtInfo ) {
-    this.courtInfo = courtInfo;
+  constructor() {
+    this.x = 8;
+    this.cells = [];
+    this.newCells();
   }
 
   newGame(){
     this.x = 8;
+    this.newCells();
     this.rules = new RulesService(this.x, 2 , 0);
     this.newRound();
   }
@@ -46,26 +49,25 @@ export class DisplayService {
   }
 
   showCourt(){
-    console.log(this.courtInfo.cells.toString());
     for(let row: number = 0; row < this.x; row++){
       for(let col: number = 0; col < this.x; col++){
         if(!this.round[row][col][0] && !this.round[row][col][1]){
           if(this.possible[row][col]){
             if(this.in_charge[0]){
-              this.courtInfo.cells[row][col].setState(3);
+              this.cells[row][col].setState(3);
             }
             else{
-              this.courtInfo.cells[row][col].setState(4);
+              this.cells[row][col].setState(4);
             }
           }
           else{
-            this.courtInfo.cells[row][col].setState(0);
+            this.cells[row][col].setState(0);
           }
         }
         else if(this.round[row][col][0]){
-          this.courtInfo.cells[row][col].setState(1);
+          this.cells[row][col].setState(1);
         }
-        else {this.courtInfo.cells[row][col].setState(2);
+        else {this.cells[row][col].setState(2);
         }
       }
     }
@@ -95,7 +97,7 @@ export class DisplayService {
   }
 
   getCells(){
-    return this.courtInfo.cells;
+    return this.cells;
   }
 
   setScore(){
@@ -144,6 +146,17 @@ export class DisplayService {
         case 3:
           this.labelText = 'unentschieden';
           break;
+      }
+    }
+  }
+
+  newCells(){
+    this.cells.length = 0;
+    for(let row: number = 0; row < this.x; row++)
+    {
+      this.cells[row] = [];
+      for(let col: number = 0; col < this.x; col++){
+        this.cells[row][col] = new CellInfo(row, col, 0)
       }
     }
   }

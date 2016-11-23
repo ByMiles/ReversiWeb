@@ -5,13 +5,11 @@ import {DisplayService} from 'app/display.service'
   selector: 'cell',
   templateUrl: './cell.component.html',
   styleUrls: ['./cell.component.css'],
-  providers: [DisplayService]
 })
 export class CellComponent implements OnInit {
   @Input() row: number;
   @Input() col: number;
   @Input() state: number;
-  @Input() display: DisplayService;
 
   p1: boolean = false;
   p2: boolean = false;
@@ -20,7 +18,7 @@ export class CellComponent implements OnInit {
   noCirc: boolean = true;
 
 
-  constructor() {}
+  constructor(private _display: DisplayService) {}
 
   setState(){
     switch (this.state){
@@ -62,10 +60,8 @@ export class CellComponent implements OnInit {
   }
 
   doAction(){
-    console.log("action");
     if(this.state == 3 || this.state == 4){
-      this.display.endRound(this.row, this.col);
-      console.log("reaction");
+      this._display.endRound(this.row, this.col);
     }
   }
 
