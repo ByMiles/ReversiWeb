@@ -4,7 +4,7 @@ import { DisplayService } from 'app/display.service';
 @Component({
   selector: 'actionbar',
   templateUrl: './actionbar.component.html',
-  styleUrls: ['./actionbar.component.css'],
+  styleUrls: ['actionbar.component.scss'],
 })
 
 export class ActionbarComponent implements OnInit {
