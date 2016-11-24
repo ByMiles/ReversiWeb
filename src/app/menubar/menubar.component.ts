@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DisplayService} from "app/display.service";
 
-
 @Component({
   selector: 'menubar',
   templateUrl: './menubar.component.html',
@@ -21,6 +20,7 @@ export class MenubarComponent implements OnInit {
     this.setCourtsize(8);
     this.setVariant(1);
     this.setBeginner(0);
+
   }
 
   ngOnInit() {
