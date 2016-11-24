@@ -5,7 +5,7 @@ import { DisplayService } from 'app/display.service'
   selector: 'court',
   templateUrl: './court.component.html',
   //template: '<pre>{{ display.round | json }}</pre>',
-  styleUrls: ['./court.component.css'],
+  styleUrls: ['court.component.scss'],
 })
 export class CourtComponent implements OnInit {
 

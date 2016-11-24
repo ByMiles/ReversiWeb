@@ -5,7 +5,7 @@ import { DisplayService } from 'app/display.service';
 @Component({
   selector: 'coin',
   templateUrl: './coin.component.html',
-  styleUrls: ['./coin.component.css'],
+  styleUrls: ['coin.component.scss'],
 })
 export class CoinComponent implements OnInit {
 

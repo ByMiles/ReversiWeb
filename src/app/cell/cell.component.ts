@@ -4,7 +4,7 @@ import {DisplayService} from 'app/display.service'
 @Component({
   selector: 'cell',
   templateUrl: './cell.component.html',
-  styleUrls: ['./cell.component.css'],
+  styleUrls: ['cell.component.scss'],
 })
 export class CellComponent implements OnInit {
   @Input() row: number;

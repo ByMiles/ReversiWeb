@@ -1,0 +1,25 @@
+
+.court {
+  margin: 0 auto;
+  background-color: darkslategray;
+  border-style: outset;
+  border-color: lightgray darkgray darkgray lightgray;
+  border-radius: 3%;
+  border-width: 20px;
+
+  display: table;
+
+  width: 75vh;
+  height: 75vh;
+
+  .court-row {
+    display: table-row;
+
+    .court-cell {
+      display: table-cell;
+      border: 1px solid black;
+      position: relative;
+    }
+  }
+}
+
