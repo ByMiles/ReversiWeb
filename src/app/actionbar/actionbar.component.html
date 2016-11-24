@@ -1,11 +1,30 @@
-<div>
-  <div></div>
-  <div></div>
-  <coin class = "p1" [score] = "display.getScoreP1()"></coin>
-  <button [class.hidden]="display.skipable()" (click)="skipAction()"> Skip </button>
-  <p class = "label" [class.p1] ="display.getIn_charge()[0]" [class.p2] = "display.getIn_charge()[1]" >{{ display.getLabelText() }}</p>
-  <button [class.hidden]="display.undoable()" (click)="undoAction()"> Undo </button>
-  <coin class = "p2" [score] = "display.getScoreP2()"></coin>
-  <div></div>
-  <div></div>
+<div class="actionbar">
+  <div class="col-xs-2 text-xs-center">
+    <coin class="p1 coin" [score]="display.getScoreP1()"></coin>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <button class="btn btn-default" [class.hidden]="display.skipable()" (click)="skipAction()">Skip</button>
+  </div>
+
+
+  <div class="col-xs-4 text-xs-center">
+    <p
+      class="board-message"
+      [class.p1]="display.getIn_charge()[0]"
+      [class.p2]="display.getIn_charge()[1]">
+      {{display.getLabelText() }}
+    </p>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <button class="btn default" [class.hidden]="display.undoable()" (click)="undoAction()">Undo</button>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <coin class="p2 coin" [score]="display.getScoreP2()"></coin>
+  </div>
 </div>

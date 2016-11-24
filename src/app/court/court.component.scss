@@ -1,0 +1,22 @@
+@import "../../styles";
+
+.court {
+  margin: 0 auto;
+  border: $boardBorderColor 20px solid;
+  border-radius: 3%;
+  display: table;
+
+  width: 70vh;
+  height: 70vh;
+
+  .court-row {
+    display: table-row;
+
+    .court-cell {
+      display: table-cell;
+      border: 1px solid $boardSpacerColor;
+      position: relative;
+    }
+  }
+}
+

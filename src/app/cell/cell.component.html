@@ -1,2 +1,11 @@
-<div id = cell (click)="doAction()"><div [class.circleP1]="(state == 1)" [class.circleP2]="(state == 2)" [class.circleP1Prev]="(state == 3)" [class.circleP2Prev]="(state == 4)" [class.noCircle]="(state == 0)" ></div></div>
+<div class="cell" (click)="doAction()">
+  <div
+    [class.circleP1]="(state == 1)"
+    [class.circleP2]="(state == 2)"
+    [class.circleP1Prev]="((state == 3) && _display.getHint())"
+    [class.circleP2Prev]="((state == 4)&& _display.getHint())"
+    [class.noCircle]="(state == 0)">
+
+  </div>
+</div>
 

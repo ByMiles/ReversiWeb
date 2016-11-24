@@ -1,0 +1,11 @@
+@import "../../styles";
+
+.page-title {
+  color: $titleColor;
+  margin: $spacer-y 0;
+  padding-bottom: $spacer-y;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $spacer-x;
+  border-bottom: 1px solid $titleColor;
+}

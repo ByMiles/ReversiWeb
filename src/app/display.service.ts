@@ -23,16 +23,19 @@ export class DisplayService {
 
   private labelText: string;
 
+  private hint: boolean;
+
   constructor() {
     this.x = 8;
     this.cells = [];
     this.newCells();
   }
 
-  newGame(){
-    this.x = 8;
+  newGame(x: number, variant: number, beginner: number){
+    this.x = x;
     this.newCells();
-    this.rules = new RulesService(this.x, 2 , 0);
+    this.hint = true;
+    this.rules = new RulesService(this.x, variant , beginner);
     this.newRound();
   }
 
@@ -127,6 +130,14 @@ export class DisplayService {
 
   getLabelText(){
     return this.labelText;
+  }
+
+  getHint(){
+    return this.hint;
+  }
+
+  switchHint(){
+    this.hint = !this.hint;
   }
 
   checkWin(){
