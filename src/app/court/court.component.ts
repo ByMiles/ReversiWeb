@@ -13,7 +13,7 @@ export class CourtComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._display.newGame();
+    this._display.newGame(8, 0, 0);
   }
 
 }

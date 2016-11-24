@@ -1,22 +1,78 @@
-<nav class="navbar navbar-dark bg-inverse navbar-full">
-  <a class="navbar-brand" href="#">Reversi</a>
-  <ul class="nav navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+<div class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          Reversi
+        </a>
       </div>
-    </li>
-  </ul>
-</nav>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ choosen_courtsize }}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="6" (click)="setCourtsize(6)"> 6 x 6 </label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="7" (click)="setCourtsize(7)"> 7 x 7 </label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="8" (click)="setCourtsize(8)" checked="checked" > 8 x 8 </label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="9" (click)="setCourtsize(9)"> 9 x 9 </label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="10" (click)="setCourtsize(10)"> 10 x 10 </label>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ choosen_variant }}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="variant" value="1" (click)="setVariant(1)" checked="checked" >Variante 1</label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="variant" value="2" (click)="setVariant(2)">Variante 2</label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="variant" value="3" (click)="setVariant(3)">Variante 3</label>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ choosen_beginner }}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="6" (click)="setBeginner(0)" checked="checked" >Spieler 1</label>
+            </li>
+            <li class="radio">
+              <label class="radio-inline">
+                <input type="radio" name="courtsize" value="7" (click)="setBeginner(1)">Spieler 2</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+        <button type="button" class="btn btn-default navbar-btn buttonAdd" (click)="newPvP()">Spieler vs Spieler</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-default navbar-btn buttonAdd">Spieler vs Computer</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-default navbar-btn buttonAdd" (click)="switchHint()">Vorschau</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
