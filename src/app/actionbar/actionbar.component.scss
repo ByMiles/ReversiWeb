@@ -3,6 +3,18 @@
 
 .actionbar {
   padding-top: $spacer-y;
+
+  button.btn {
+    height: 50px;
+  }
+}
+
+.board-message {
+
+  height: 50px;
+  line-height: 50px;
+  border-radius: $spacer-y;
+
 }
 
 .coin {

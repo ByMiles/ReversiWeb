@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['titlebar.component.scss']
 })
 export class TitlebarComponent implements OnInit {
-  titletitle = 'R E V E R S I';
+  title = 'Reversi';
+
   constructor() { }
 
   ngOnInit() {

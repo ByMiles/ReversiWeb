@@ -1,9 +1,11 @@
-$playerOneColor: #ff0000;
-$playerTwoColor: #000000;
-$playerOneInverseColor: invert($playerOneColor);
-$playerTwoInverseColor: invert($playerTwoColor);
-$boardColor: rgb(34, 139, 34);
-$boardBorderColor: lightgray darkgray darkgray lightgray;
+$playerOneColor: #e74c3c;
+$playerTwoColor: #3498db;
+$playerOneInverseColor: #ecf0f1;
+$playerTwoInverseColor: #ecf0f1;
+$boardColor: #1abc9c;
+$boardSpacerColor: #7f8c8d;
+$boardBorderColor: #7f8c8d;
+$titleColor: #d35400;
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
