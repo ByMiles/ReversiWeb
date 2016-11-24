@@ -1,6 +1,9 @@
 .menubar{
+  display: table;
+  border-spacing: 10px;
   position: relative;
   height: 5%;
+  width: 100%;
   background-color: gray;
 }
 
