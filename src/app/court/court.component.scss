@@ -1,9 +1,10 @@
+@import "../../styles";
 
 .court {
   margin: 0 auto;
   background-color: darkslategray;
   border-style: outset;
-  border-color: lightgray darkgray darkgray lightgray;
+  border-color: $boardBorderColor;
   border-radius: 3%;
   border-width: 20px;
 

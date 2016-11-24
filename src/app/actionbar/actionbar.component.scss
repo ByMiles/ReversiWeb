@@ -1,5 +1,25 @@
-
+@import "../../styles";
+@import "../../../node_modules/bootstrap/scss/variables";
 
 .actionbar {
-  padding-top: 1rem;
+  padding-top: $spacer-y;
 }
+
+.coin {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+.p1 {
+  background-color: $playerOneColor;
+  color: $playerOneInverseColor;
+}
+
+.p2 {
+  background-color: $playerTwoColor;
+  color: $playerTwoInverseColor;
+}
+

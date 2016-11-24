@@ -1,5 +1,7 @@
+@import "../../styles";
+
 .cell {
-  background-color: rgb(34, 139, 34);
+  background-color: $boardColor;
   position: absolute;
 
   height: 100%;
@@ -20,28 +22,28 @@
   }
 
   .circleP1 {
-    background: black;
+    background-color: $playerOneColor;
     width: 75%;
     height: 75%;
     margin-top: 12.5%;
   }
 
   .circleP2 {
-    background: white;
+    background: $playerTwoColor;
     width: 75%;
     height: 75%;
     margin-top: 12.5%;
   }
 
   .circleP1Prev {
-    background: black;
+    background: $playerOneColor;
     width: 25%;
     height: 25%;
     margin-top: 37.5%;
   }
 
   .circleP2Prev {
-    background: white;
+    background: $playerTwoColor;
     width: 25%;
     height: 25%;
     margin-top: 37.5%;

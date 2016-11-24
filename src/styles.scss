@@ -1,3 +1,11 @@
+$playerOneColor: #ff0000;
+$playerTwoColor: #000000;
+$playerOneInverseColor: invert($playerOneColor);
+$playerTwoInverseColor: invert($playerTwoColor);
+$boardColor: rgb(34, 139, 34);
+$boardBorderColor: lightgray darkgray darkgray lightgray;
+
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/utilities";
 
@@ -7,3 +15,7 @@ body {
   width: 100%;
 }
 
+
+.hidden {
+  visibility: hidden;
+}
