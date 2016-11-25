@@ -50,4 +50,10 @@ export class MenubarComponent implements OnInit {
     this._display.switchHint();
   }
 
+  setDesign(style: number){
+    switch(style){
+      case 1:
+    }
+  }
+
 }

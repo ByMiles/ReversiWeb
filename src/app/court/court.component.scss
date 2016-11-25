@@ -2,7 +2,7 @@
 
 .court {
   margin: 0 auto;
-  border: $boardBorderColor 20px solid;
+  border: $boardBorderColor 1vh outset;
   border-radius: 3%;
   display: table;
 
@@ -14,7 +14,10 @@
 
     .court-cell {
       display: table-cell;
-      border: 1px solid $boardSpacerColor;
+      border-width: 4px;
+      border-style: outset;
+      border-color: $boardSpacerColor;
+
       position: relative;
     }
   }

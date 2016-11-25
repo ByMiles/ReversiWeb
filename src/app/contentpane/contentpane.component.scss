@@ -1,5 +1,6 @@
-.contentpane {
+@import '../../styles';
 
+.contentpane {
 
   .court-wrapper {
 
@@ -8,5 +9,11 @@
 
     }
   }
+}
+
+.actionbar-wrapper{
+  background-color: black;
+  border-radius: $spacer-y;
+  margin-top: 1em;
 }
 

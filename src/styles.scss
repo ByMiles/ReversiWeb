@@ -2,8 +2,8 @@ $playerOneColor: #e74c3c;
 $playerTwoColor: #3498db;
 $playerOneInverseColor: #ecf0f1;
 $playerTwoInverseColor: #ecf0f1;
-$boardColor: #1abc9c;
-$boardSpacerColor: #7f8c8d;
+$boardColor: #27ae60;
+$boardSpacerColor: #5d6a6b;
 $boardBorderColor: #7f8c8d;
 $loaderColor: #7f8c8d;
 $titleColor: #d35400;
@@ -17,6 +17,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background: linear-gradient(to bottom right, #46474b , #0a0c12 );
 }
 
 .loader-wrapper {

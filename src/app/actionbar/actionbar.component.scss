@@ -4,8 +4,15 @@
 .actionbar {
   padding-top: $spacer-y;
 
+
   button.btn {
     height: 50px;
+    color: floralwhite;
+    background-color: #666666;
+    font-size: 1.2em;
+    border-radius: $spacer-y;
+    border-width: 1px;
+    border-color: floralwhite;
   }
 }
 
@@ -14,6 +21,7 @@
   height: 50px;
   line-height: 50px;
   border-radius: $spacer-y;
+  font-size: 1.5em;
 
 }
 
@@ -26,12 +34,14 @@
 }
 
 .p1 {
-  background-color: $playerOneColor;
+  background:radial-gradient(farthest-side at 30% 30%, lighten($playerOneColor, 15%), $playerOneColor, darken($playerOneColor, 15%));
   color: $playerOneInverseColor;
+  font-size: 1.5em;
 }
 
 .p2 {
-  background-color: $playerTwoColor;
+  background: radial-gradient(farthest-side at 30% 30%, lighten($playerTwoColor, 15%), $playerTwoColor, darken($playerTwoColor, 15%));
   color: $playerTwoInverseColor;
+  font-size: 1.5em;
 }
 
