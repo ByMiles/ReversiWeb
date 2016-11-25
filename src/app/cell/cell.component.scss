@@ -1,8 +1,8 @@
 @import "../../styles";
 
 .cell {
-  background-color: $boardColor;
   position: absolute;
+  background-color: $boardColor;
 
   height: 100%;
   width: 100%;
@@ -19,6 +19,31 @@
     display: inline-block;
     border-radius: 100%;
 
+  }
+
+
+
+  .zonki {
+
+    position: absolute;
+    background-color: firebrick;
+
+    height: 100%;
+    width: 100%;
+
+    vertical-align: middle;
+    text-align: center;
+
+    .circleP1,
+    .circleP2,
+    .circleP1Prev,
+    .circleP2Prev,
+    .noCircle {
+
+      display: inline-block;
+      border-radius: 100%;
+
+    }
   }
 
   .circleP1 {
