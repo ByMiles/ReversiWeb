@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DisplayService} from "app/display.service";
 
 @Component({
@@ -25,33 +25,33 @@ export class MenubarComponent implements OnInit {
 
   ngOnInit() {
   }
-  setCourtsize(courtsize: number){
-    console.log(courtsize);
+
+  setCourtsize(courtsize: number) {
     this.courtsize = courtsize;
     this.choosen_courtsize = this.courtsize + " x " + this.courtsize;
   }
 
-  setVariant(variant: number){
+  setVariant(variant: number) {
     this.variant = variant;
     this.choosen_variant = "Variante " + this.variant;
   }
 
-  setBeginner(beginner: number){
+  setBeginner(beginner: number) {
     this.beginner = beginner;
     beginner = this.beginner + 1;
     this.choosen_beginner = "Spieler " + beginner;
   }
 
-  newPvP(){
+  newPvP() {
     this._display.newGame(this.courtsize, this.variant, this.beginner)
   }
 
-  switchHint(){
+  switchHint() {
     this._display.switchHint();
   }
 
-  setDesign(style: number){
-    switch(style){
+  setDesign(style: number) {
+    switch (style) {
       case 1:
     }
   }
