@@ -16,11 +16,11 @@ export class CellComponent implements OnInit {
   prev1: boolean = false;
   prev2: boolean = false;
   noCirc: boolean = true;
-  zonk: number = 2;
+  cellcolor: string;
 
 
   constructor(private _display: DisplayService) {
-    this.zonk = 2;
+    this.cellcolor = '#27ae60';
   }
 
   setState(){
@@ -63,17 +63,12 @@ export class CellComponent implements OnInit {
   }
 
   doAction(){
-    console.log(this.zonk);
     if(this.state == 3 || this.state == 4){
       this._display.endRound(this.row, this.col);
     }
-    else{
-      this.zonk = 1;
-      console.log(this.zonk);
-      setTimeout(function() {
-        this.zonk = 2;
-      }, 1000);
-      console.log(this.zonk);
+    else {
+      this.cellcolor = 'firebrick';
+      setTimeout(() => this.cellcolor = '#27ae60', 1000);
     }
   }
 
