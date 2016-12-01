@@ -1,0 +1,30 @@
+<div class="actionbar">
+  <div class="col-xs-2 text-xs-center">
+    <coin class="p1 coin" [score]="toFront.getScoreP1()"></coin>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <button class="btn btn-default" [class.hidden]="toFront.skipable" (click)="skipAction()">Skip</button>
+  </div>
+
+
+  <div class="col-xs-4 text-xs-center">
+    <p
+      class="board-message"
+      [class.p1]="toFront.getIn_charge()[0]"
+      [class.p2]="toFront.getIn_charge()[1]">
+      {{ toFront.getLabelText() }}
+    </p>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <button class="btn default" [class.hidden]="toFront.undoable" (click)="undoAction()">Undo</button>
+  </div>
+
+
+  <div class="col-xs-2 text-xs-center">
+    <coin class="p2 coin" [score]="toFront.getScoreP2()"></coin>
+  </div>
+</div>

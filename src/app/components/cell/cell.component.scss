@@ -1,0 +1,63 @@
+@import "../../../variables";
+
+.cell {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  vertical-align: middle;
+  text-align: center;
+
+  .circleP1,
+  .circleP2,
+  .circleP1Prev,
+  .circleP2Prev,
+  .noCircle {
+
+    display: inline-block;
+    border-radius: 100%;
+
+  }
+
+
+
+
+  .circleP1 {
+
+    background: radial-gradient(farthest-side at 30% 30%, lighten($playerOneColor, 15%), $playerOneColor, darken($playerOneColor, 15%));
+    box-shadow: 0.1vw 0.1vh darken($boardColor, 20%);
+    width: 75%;
+    height: 75%;
+    margin-top: 12.5%;
+  }
+
+  .circleP2 {
+    background: radial-gradient(farthest-side at 30% 30%, lighten($playerTwoColor, 15%), $playerTwoColor, darken($playerTwoColor, 15%));
+    box-shadow: 0.1vw 0.1vh darken($boardColor, 20%);
+    width: 75%;
+    height: 75%;
+    margin-top: 12.5%;
+  }
+
+  .circleP1Prev {
+    background: $playerOneColor;
+    width: 25%;
+    height: 25%;
+    margin-top: 37.5%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .circleP2Prev {
+    background: $playerTwoColor;
+    width: 25%;
+    height: 25%;
+    margin-top: 37.5%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .noCircle {
+
+  }
+
+}

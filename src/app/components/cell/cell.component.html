@@ -1,0 +1,12 @@
+<div class="cell" [style.background-color]= cellcolor
+     (click)="doAction()">
+  <div
+    [class.circleP1]="(state == 1)"
+    [class.circleP2]="(state == 2)"
+    [class.circleP1Prev]="((state == 3) && _toFront.getHint())"
+    [class.circleP2Prev]="((state == 4)&& _toFront.getHint())"
+    [class.noCircle]="(state == 0)">
+
+  </div>
+</div>
+
